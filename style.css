@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 30px;
+    padding: 40px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 500px;
+    border: 1px solid rgba(255,255,255,0.5);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 30px;
+    color: #0071e3;
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.step {
+    display: none;
+    animation: fade 0.3s ease;
+}
+
+.step.active {
+    display: block;
+}
+
+@keyframes fade {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+h2 {
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+    color: #1d1d1f;
+}
+
+.glass-select {
+    width: 100%;
+    padding: 15px;
+    background: rgba(255,255,255,0.6);
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 15px;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    outline: none;
+    transition: 0.2s;
+}
+
+.glass-select:focus {
+    border-color: #0071e3;
+    box-shadow: 0 0 0 3px rgba(0,113,227,0.2);
+}
+
+.next-btn, .altstore-btn, .altstore-pro-btn, button[type="button"], button {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 15px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.2s;
+    margin: 5px 0;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+}
+
+.next-btn {
+    background: #0071e3;
+    color: white;
+}
+
+.next-btn:hover {
+    background: #005bbf;
+}
+
+.altstore-btn {
+    background: #5865f2;
+    color: white;
+}
+
+.altstore-pro-btn {
+    background: #eb4d4b;
+    color: white;
+    border: none;
+}
+
+.altstore-pro-btn:hover {
+    background: #c43c3a;
+}
+
+.button-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#phishForm input {
+    width: 100%;
+    padding: 15px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    font-size: 1rem;
+    background: rgba(255,255,255,0.8);
+}
+
+.checkbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 15px 0;
+}
+
+.code-box {
+    background: #1d1d1f;
+    color: #00ffaa;
+    padding: 20px;
+    border-radius: 15px;
+    font-family: monospace;
+    font-size: 2rem;
+    text-align: center;
+    letter-spacing: 5px;
+    margin: 20px 0;
+}
+
+.youtube-guide {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.youtube-guide iframe {
+    border-radius: 20px;
+    max-width: 100%;
+}
